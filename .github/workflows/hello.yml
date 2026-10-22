@@ -1,0 +1,10 @@
+name: hello                       # the name you will see in the Actions tab
+on:
+  push:
+    branches: [main]              # run every time we push to main
+jobs:
+  say-hello:                      # a job = a group of steps
+    runs-on: ubuntu-latest        # a fresh Linux computer from GitHub
+    steps:
+      - uses: actions/checkout@v4 # step 1: download our code
+      - run: echo "Hello from GitHub Actions"   # step 2: run a command
